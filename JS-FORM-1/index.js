@@ -27,6 +27,8 @@ bouton.addEventListener("click", function () {
   }
 });
 
+// CALCULATRICE BIS PLUS COURT 
+
 
 // num1 = parseInt(num1);
 // console.log(num1);
@@ -38,9 +40,7 @@ bouton.addEventListener("click", function () {
 // let res = document.getElementById('premier-nombre').parseInt(value)
 //    + document.getElementById('deuxieme-nombre').parseInt(value);
 
-// document.getElementById('mon-bouton').onclick =
-
-// function calculer(num1, num2) {
+// let document.getElementById('mon-bouton').onclick = function calculer(num1, num2) {
 //    alert(num1 + num2);
 // }
 // calculer(30, 20);
@@ -54,3 +54,6 @@ bouton.addEventListener("click", function () {
 // alert(result);
 // document.getElementById('resultat').innerHtml(result);
 //    }
+
+
+// 

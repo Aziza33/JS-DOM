@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catalogue filtré</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <section>
+    <label for="categorie-select">Filtrer par catégorie :</label>
+    <select id="categorie-select" onchange="filtrer()">
+      <option value="all">Afficher tout</option>
+      <option value="homme">Rayon homme</option>
+      <option value="femme">Rayon femme</option>
+      <option value="enfant">Rayon enfant</option>
+    </select>
+
+    <section id="produits">
+      <article class="homme">
+        <img src="IMG/sacHomme.jpeg" alt="Sac homme">
+        <p>Sac à dos </p>
+      </article>
+      <article class="homme">
+        <img src="IMG/teeshirtHomme.webp" alt="Tee-shirt Homme">
+        <p>Tee-shirt Homme</p>
+      </article>
+      <article class="homme">
+        <img src="IMG/pantalonHomme.jpeg" alt="Pantalon Homme">
+        <p>Pantalon Homme</p>
+      </article>
+
+      <article class="femme">
+        <img src="IMG/sacFemme.jpeg" alt="Sac femme">
+        <p>Sac à dos </p>
+      </article>
+      <article class="femme">
+        <img src="IMG/robe.webp" alt="Robe">
+        <p>Robe</p>
+      </article>
+      <article class="femme">
+        <img src="IMG/pantalonFemme.webp" alt="Pantalon Femme">
+        <p>Pantalon Femme</p>
+      </article>
+
+      <article class="enfant">
+        <img src="IMG/sacMickey.jpeg" alt="Sac enfant">
+        <p>Sac à dos </p>
+      </article>
+      <article class="enfant">
+        <img src="IMG/pyjamaEnfant.jpeg" alt="Pyjama Enfant">
+        <p>Pyjama Enfant</p>
+      </article>
+      <article class="enfant">
+        <img src="IMG/teeshirtEnfant.jpeg" alt="Tee-shirt Enfant">
+        <p>Tee-shirt Enfant</p>
+      </article>
+    </section>
+  </section>
+
+  <script src="index.js"></script>
+</body>
+</html>

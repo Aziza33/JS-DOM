@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f6f6f6;
+}
+
+select {
+  padding: 8px;
+  margin-bottom: 20px;
+}
+
+#produits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+article {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 180px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+article:hover {
+  transform: translateY(-5px);
+}
+
+article img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}

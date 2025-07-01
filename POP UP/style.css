@@ -1,0 +1,202 @@
+/*--------------POP UP----------------*/
+/* Fond semi-transparent couvrant tout l'écran */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popUpText{
+  color: black;
+}
+
+/* Affichage de la pop-up */
+.popup-overlay.active {
+  display: flex;
+}
+
+/* Contenu de la pop-up avec animation */
+.popup-content {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  position: relative;
+  min-width: 300px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+/* Animation d'apparition */
+.popup-overlay.active .popup-content {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Bouton de fermeture */
+.close-btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #888;
+}
+.close-btn:hover {
+  color: #e74c3c;
+}
+
+.imagSectionTest{
+    width: 300px;
+}
+
+.section {
+    width: 600px;
+    padding: 20px;
+    background: #f9f9f9;
+    background: grey;
+    border-radius: 8px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.section img{
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.petit-texte {
+    font-size: 14px;
+    color: black;
+}
+
+.toggle-desc{
+    display: none;
+}
+.arrow-container {
+    /* 4 cotés qui suivent le sens des aiguilles d'une montre
+    haut et bas gauche droite */
+    margin: 15px 0;
+    /* pour montrer qd on peut cliquer */
+    cursor: pointer;
+    display: inline-block;
+}
+
+.arrow-down {
+    font-size: 24px;
+    display: inline-block;
+    /* pour grossir la fleche */
+    transition: transform 0.3 sec;
+}
+
+.description-box {
+    /* le texte caché */
+    max-height: 0;
+    overflow: hidden;
+    /* fonction accéleration-ralentissement qd on fait une transition, */
+    transition: max-height 0.3s ease-out;
+    background: gray;
+    border-radius: 5px;
+    padding: 0 15px;
+    margin: 10px 0;
+}
+.textBoxBlack {
+    color: #111;
+}
+.toggle-desc:checked ~ .description-box{
+/* selecteur de frère = tilde, on selectionne ts les elements descriptions-box frères de l'élément qui sera touché  */
+max-height: 500px;
+padding: 15px;
+}
+
+.toggle-desc:checked ~ .arrow-container .arrow-down{
+    transform: scale(1.5);
+}
+
+.fade-in {
+    width: 500px;
+    margin-top: 10em;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(100px);
+    animation: fadeInMove 3s ease-out forwards;
+}
+.fadeinColor {
+    color: #111;
+}
+@keyframes fadeInMove {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*  ...............  Zoom rotate In ...................................... */
+/* .zoom-rotate-in {
+    
+    opacity: 0;
+    transform: scale(0.5) rotate(-30deg);
+    /* courbe de vitesse personnalisée  axe x1 = 1er point de controle axe horizontal y1 = 1er point de controle axe vertical test sur site cubic bezier */
+    /* animation: zoomRotateIn 2s cubic-bezier(.68, -0.55, .27, 1.55) forwards; */
+/* } */
+/* 
+@keyframes zoomRotateIn {
+   to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+   } 
+} */ 
+
+/* ..............    CSS ANIMATION CARTOON EFFET BOUNCE .............................. */
+.bounce {
+    display: inline-block;
+animation: bounce 1s infinite;
+}
+
+@keyframes bounce{
+    0%, 100% {
+        transform: translateY(0);
+    }
+    20% {
+    transform: translateY(-200px);
+    }
+    40% {
+    transform: translateY(-140px);
+    }
+    60% {
+    transform: translateY(-70px);
+    }
+    80% {
+    transform: translateY(-30px);
+    }
+}
+
+/* ..............  ANIMATION SHAKE AVEC BOUTON .................... */
+.shake {
+    display: inline-block;
+    animation: shake 0.6s cubic-bezier(.36, .0.7, .19, .97) both;
+}
+
+@keyframes shake{
+    10%, 90% {transform: translateX(-5px);}
+    20%, 80% {transform: translateX(10px);}
+    30%, 50%, 70% {transform: translateX(-20px);}
+    40%, 60% {transform: translateX(-20px);}
+}
+
+.parallax {
+    background: url(IMG/coucherSoleil.jpeg);
+    background-repeat: no-repeat;
+    /* height: 100%; */
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover; 
+}
+
+main{
+    padding-top: 80px;
+}

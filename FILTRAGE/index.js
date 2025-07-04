@@ -1,19 +1,74 @@
 
-function filtrer(){
-    let select = document.getElementById('categorie-select');
-    let category = select.value;
-    let products = document.querySelectorAll("#produits article");
+// function filtrer(){
+//     let select = document.getElementById('categorie-select');
+//     let category = select.value;
+//     let products = document.querySelectorAll("#produits article");
 
-    products.forEach(function(article){
-        if (category === "all"){
-            article.classList.remove("hidden");
-        } else if (article.classList.contains(category)){
-            article.classList.remove("hidden");
+//     products.forEach(function(article){
+//         if (category === "all"){
+//             article.classList.remove("hidden");
+//         } else if (article.classList.contains(category)){
+//             article.classList.remove("hidden");
+//         }else{
+//         article.classList.add("hidden");
+//         }
+//     });
+// }
+// fonction filtrer avec ou
+
+function filtrer(){
+    let category = document.getElementById('categorie-select').value;
+    let products = document.querySelectorAll('#produits article');
+    products.forEach(function (article){
+        if (category === 'all' || (article.classList.contains(category))){
+            article.classList.remove('hidden');
         }else{
-        article.classList.add("hidden");
+            article.classList.add('hidden');
         }
     });
 }
+
+// let answer = prompt("Entrer un prenom ");
+// function afficher(){
+//           let prenoms =["Maxime", "Karim", "Sabrina", "Arnaud", "Julen"];
+
+//     prenoms.forEach(prenom =>{
+//         if (answer.classList.contains(prenom) ){
+//             alert( "Voici le prénom : " + prenom)
+//         }else{   
+//            alert("Erreur ! Ce prénom n'existe pas.")
+ 
+//         }       
+//     });
+// }
+
+// let answer = prompt("Entrer un prenom ");
+// let prenoms =["Maxime", "Karim", "Sabrina", "Arnaud", "Julen"];
+// let trouve = false;
+
+//     prenoms.forEach(prenom =>{
+//         if (answer.toLowerCase() === prenom.toLowerCase()){
+//             alert( "Voici le prénom : " + prenom);
+//             trouve = true;
+//         }
+//     });
+
+//     if (!trouve){ 
+//            alert("Erreur ! Ce prénom n'existe pas.")  
+//     };
+
+
+
+
+
+    // let prenoms =["Maxime", "Karim", "Sabrina", "Arnaud", "Julen"];
+    // prenoms.forEach(prenom => {
+    //     alert ("Voici le prénom " + prenom);
+    // });
+
+
+
+
 
 
 

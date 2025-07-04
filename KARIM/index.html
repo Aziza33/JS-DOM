@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- <form>
+        <label for="nom">Nom:</label>
+        <input id="nom" value="Karim" />
+        <label for="prenom">Prénom:</label>
+        <input id="prenom" value="Jean" />
+    </form> -->
+
+    <!-- <form >
+        
+        <label for="premier-nombre">Nombre 1</label>
+        <input id="premier-nombre" value=""/>
+        <label for="deuxieme-nombre">Nombre 2</label>
+        <input id="deuxieme-nombre" value=""/>
+        <label for="final">Resultat</label>
+        <input id="final" value=""/>
+
+        <button id="calcul" type="button">Calculer</button>
+
+    </form> -->
+
+    <!-- <p>C'est l'histoire d'un garçon troublé</p>
+    <p class="spoiler">car il s'avère que son ours en peluche a disparu</p>
+    <p class="spoiler">mais finalement il le retrouve</p>
+    <button id="cacher">Cacher les spoilers</button>
+    <button id="afficher">Afficher les spoilers</button> -->
+
+    <!-- <p id="premier">texte important</p>
+    <p id="second">autre texte</p> -->
+
+   <!-- <h1 id="titre">Bonjour les CDA</h1>
+         Pop-up -->
+        <!-- <div id="popup" class="popup-overlay">
+            <div class="popup-content">
+                <span class="close-btn" id="closeBtn">&times;</span>
+                <h2 class="popUpText">Bienvenue !</h2>
+                <p class="popUpText">Ceci est une pop-up qui s'affiche automatiquement.</p>
+            </div>
+        </div>
+
+        <div class="section">
+                <img class="imagSectionTest" src="image/Livre.png" alt="Description de l’image">
+                <p class="petit-texte">Voici une petite moto cross...</p>
+                
+                Checkbox caché
+                <input type="checkbox" id="toggle-desc" class="toggle-desc">
+                <label for="toggle-desc" class="arrow-container">
+                    <span class="arrow-down">↓ voir plus</span>
+                </label>
+                
+                <div class="description-box">
+                    <p class="textBoxBlack">Voici un long texte descriptif de la moto. Il peut contenir beaucoup de détails, d’informations, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+        </div>
+
+        <section id="fadein-section" class="fade-in">
+            <h2 class="fadeinColor">Section animée en fade-in</h2>
+            <p class="fadeinColor">Ce contenu apparaît en fondu grâce à une animation CSS.</p>
+        </section>
+
+        <section class="zoom-rotate-in">
+            <h2 class="fadeinColor">Effet zoom et rotation</h2>
+            <p class="fadeinColor">Ce contenu apparaît en effet de zoom.</p>
+        </section> --> 
+    <!-- <div>
+
+      <section id="filter-section">
+            <div>
+                <label for="categorie-select">Filtrer par catégorie : </label>
+                <select id="categorie-select" onchange="filtrage(this.value)">
+                    <option value="all">Toutes les catégories</option>
+                    <option value="electronique">Electronique</option>
+                    <option value="sport">Sport</option>
+                    <option value="maison">Maison</option>
+                </select>
+            </div>
+
+        
+        
+            <section id="products">
+                <article class="electronique sport">Montre connectée</article>
+                <article class="electronique maison">Aspirateur Robot</article>
+                <article class="sport">Tapis de yoga</article>
+                <article class="electronique">Enceinte</article>
+                <article class="maison">Cafetiere</article>
+                <article class="sport">Ballon</article>
+                <article class="electronique maison">Lampe connectée</article>
+                <article class="sport maison">Rameur d'appartement</article>
+                <article class="electronique">Tablette graphique</article>
+                <article class="maison">Diffuseur d'huiles essentielles</article>
+            </section>
+      </section>
+
+    </div> -->
+
+    <section class="filtrage-categorie">
+                <div class="filtre-bar">
+                    <label for="categorie-select">Filtrer par catégorie :</label>
+                    <select id="categorie-select" onchange="filtrer(this.value)">
+                        <option value="all">Tous</option>
+                        <option value="ludique">Ludique</option>
+                        <option value="pratique">Pratique</option>
+                        <option value="sportif">Sportif</option>
+                    </select>
+                </div>
+                <section id="produits" class="produits-grid">
+                    <article class="ludique pratique">
+                        <span class="prod-nom">iPad</span>
+                        <span class="prod-cat">Ludique, Pratique</span>
+                    </article>
+                    <article class="ludique sportif">
+                        <span class="prod-nom">Batte de baseball</span>
+                        <span class="prod-cat">Ludique, Sportif</span>
+                    </article>
+                    <article class="pratique">
+                        <span class="prod-nom">Ventilateur</span>
+                        <span class="prod-cat">Pratique</span>
+                    </article>
+                    <article class="ludique">
+                        <span class="prod-nom">Jeu d'échecs</span>
+                    </article>
+                    <article class="sportif">
+                        <span class="prod-nom">Ballon de foot</span>
+                        <span class="prod-cat">Sportif</span>
+                    </article>
+                    <article class="pratique">
+                        <span class="prod-nom">Aspirateur</span>
+                        <span class="prod-cat">Pratique</span>
+                    </article>
+                    <article class="ludique">
+                        <span class="prod-nom">Console de jeux</span>
+                        <span class="prod-cat">Ludique</span>
+                    </article>
+                    <article class="pratique sportif">
+                        <span class="prod-nom">Vélo</span>
+                        <span class="prod-cat">Pratique, Sportif</span>
+                    </article>
+                    <article class="ludique">
+                        <span class="prod-nom">Puzzle</span>
+                        <span class="prod-cat">Ludique</span>
+                    </article>
+                    <article class="pratique">
+                        <span class="prod-nom">Cafetière</span>
+                        <span class="prod-cat">Pratique</span>
+                    </article>
+                </section>
+    </section>
+    <script>
+            function filtrer(categorie) {
+                // Sélectionne tous les éléments <article> dans la section #produits
+                const produits = document.querySelectorAll('#produits article');
+
+                // Parcourt chaque produit de la liste
+                produits.forEach(produit => {
+                    // Si la catégorie est "all" OU si le produit possède la classe de la catégorie sélectionnée
+                    if (categorie === 'all' || produit.classList.contains(categorie)) {
+                        // On affiche le produit (on enlève la classe 'hide')
+                        produit.classList.remove('hide');
+                    } else {
+                        // Sinon, on masque le produit (on ajoute la classe 'hide')
+                        produit.classList.add('hide');
+                    }
+                });
+            }
+        </script>
+  
+
+</body>
+<script src="index.js"></script>
+</html>

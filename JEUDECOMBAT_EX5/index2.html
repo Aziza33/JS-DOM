@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <script>
+
+        class Armes {
+            constructor(sword, gun, hammer, shield){
+                this.sword = sword;
+                this.gun = gun;
+                this.hammer = hammer;
+                this.shield = shield;
+            }
+
+            displayArmes() {
+               return `Voici quelques armes : ${this.sword},  ${this.gun}, et ${this.shield}`;
+            //    return ("une" + $(this.sword) + " une " + $(this.gun));
+        }
+    }
+
+    class Sorts {
+        constructor(mauvaisOeil, calamite){
+            this.mauvaisOeil = mauvaisOeil;
+            this.calamite = calamite;
+        }
+     displaySorts(){
+                return `Voici les sorts : ${this.mauvaisOeil} et ${this.calamite}`;
+        }
+    }
+
+    class Personnage {
+        constructor(nom, type, force, pointFort){
+            this.nom = nom;
+            this.type = type;
+            this.force = force;
+            this.pointFort = pointFort;
+        }
+
+        afficherPersonnage (){
+            return `Voici les caracteristiques : ${this.nom}, ${this.type}, ${this.force}, ${this.pointFort}`;
+        }
+    }
+
+    class Magicien extends Personnage {
+        constructor(nom, type, force, pointFort, origine, sante, degats){
+            // tjrs rapp ds super attributs classe mère et on rajoute les nouveaux attributs ou paramètres
+            super(nom, type, force, pointFort);
+            this.nom = nom;
+            this.origine = origine;
+            this.sante = sante;
+            this.degats = degats;
+        }
+
+        afficherMagicien(){
+            return  `Voici les caractéristiques de ${this.nom} : ${this.type}, ${this.force}, ${this.pointFort}, ${this.sante}, ${this.degats}.`;
+        }
+    }
+
+    class Guerrier extends Personnage {
+        // on met en param du constructor les param class mere + les nouv
+        constructor(nom, type, force, pointFort,origine, sante, degats){
+            super(nom, type, force, pointFort);
+            this.origine = origine;
+            this.sante = sante;
+            this.degats = degats;
+        }
+
+        afficherGuerrier(){
+            return  `Voici les caractéristiques de ${this.nom} : ${this.type}, ${this.force}, ${this.pointFort}, ${this.sante}, ${this.degats}.`;
+
+        }
+ }
+    
+    class Vampire extends Personnage {
+        constructor(nom, type, force, pointFort,origine, sante, degats){
+            super(nom, type, force, pointFort);
+            this.origine = origine;
+            this.sante = sante;
+            this.degats = degats;
+        }
+
+        afficherVampire(){
+            return  `Voici les caractéristiques de ${this.nom} : ${this.type}, ${this.force}, ${this.pointFort}, ${this.sante}, ${this.degats}.`;
+
+        }
+ }
+
+    class Chevalier extends Personnage {
+        constructor(nom, type, force, pointFort,origine, sante, degats){
+            super(nom, type, force, pointFort);
+            this.origine = origine;
+            this.sante = sante;
+            this.degats = degats;
+        }
+
+        afficherChevalier(){
+            return  `Voici les caractéristiques de ${this.nom} : ${this.type}, ${this.force}, ${this.pointFort}, ${this.sante}, ${this.degats}.`;
+        }
+ }
+    
+
+    let personnage1 = {
+        nom: "DarkBakor",
+        type: "magicien",
+        origine: "Tammara",
+        sante: "5000",
+        force: "5000",
+        pointFort: "malédictions sur plusieurs générations",
+        degats: "dégats : 10000"
+    }
+    let personnage2 = {
+        nom: "Dracula",
+        type: "vampire",
+        origine: "Pensylvanie",
+        sante: "1000",
+        force: "4500",
+        pointFort: "Te vide de ton sang en 2 sec",
+        degats: "dégats : 8000"
+    }
+    let personnage3 = {
+        nom: "Dartanyan",
+        type: "chevalier",
+        origine: "Dordogne",
+        sante: "2500",
+        force: "3000",
+        pointFort: "Combat d'épée",
+        degats: "dégats : 7000"
+    }
+    let personnage4 = {
+        nom: "Brutator",
+        type: "guerrier",
+        origine: "Dordogne",
+        sante: "2500",
+        force: "3000",
+        pointFort: "Combat d'épée",
+        degats: "dégats : 5000"
+        
+    }
+
+    const result1 = new Armes();
+    const result2 = new Sorts();
+    const chevaliers = new Chevalier(personnage3.nom, personnage3.type, personnage3.force, personnage3.pointFort, personnage3.origine, personnage3.sante, personnage3.degats);
+    const magicien = new Magicien(personnage1.nom, personnage1.type, personnage1.force, personnage1.pointFort, personnage1.origine, personnage1.sante, personnage1.degats);
+    const vampire = new Vampire(personnage2.nom, personnage2.type, personnage2.force, personnage2.pointFort, personnage2.origine, personnage2.sante, personnage2.degats);
+    console.log(result1.displayArmes("sword", "hammer"));
+    console.log(result2.displaySorts("mauvaisOeil", "calamite"));
+    console.log(chevaliers.afficherChevalier(personnage3.nom));
+    console.log(magicien.afficherMagicien(personnage1.nom));
+    console.log(vampire.afficherVampire(personnage2.nom));
+    </script>
+</body>
+</html>

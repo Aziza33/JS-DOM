@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function palindrome (string){
+            return string === string.split("").reverse().join("");
+            // split tableaux de 1 caractère chaque, join on donne pas de mot donc vide.
+        };
+        let mot = prompt("Entrer un mot : ");
+        let motPalindrome = palindrome (mot);
+        console.log(motPalindrome)
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Armes {
+            constructor(weapon){
+                this.weapon = weapon;
+                this.sword = sword;
+                // this.name = name;
+                // this.category = category;
+                // this.power = power;
+                // this.damage = damage;
+            }
+
+        displayArmes(){
+                // const weapon = this.weapon;
+                return (`Voici les armes ${weapon}`);
+        }
+
+    }
+
+    class Sorts {
+        constructor(spell, rockrain){
+           this.spell = spell;
+           this.rockrain = rockrain;
+            // this.name = name;
+            // this.power = power;
+            // this.damage = damage;
+        }
+     displaySorts(){
+        console.log(`Voici les sorts ${spell}`);
+        }
+    }
+
+    // utilisation de la classe
+    const weapons = ["sword", "gun", "hammer", "shield"];
+    const spells = ["rockrain", "firespell", "icespell"];
+    // const weapons = new Armes(sword, gun, hammer, shield);
+    // const spells = new Sorts(, firespell, icespell);
+    // weapons.display();
+    // sorts.display();
+
+    console.log(`Voici les caracteristiques ${weapons}`);
+    console.log(`Voici les caracteristiques ${spells}`);
+
+    </script>
+</body>
+</html>

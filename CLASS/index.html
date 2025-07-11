@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class SommeNombres {
+            constructor(listeNombres){
+                this.numberlist = listeNombres;
+            }
+
+            calculerSomme (){
+                let somme = 0;
+                for (let nombre of this.numberlist){
+                    somme += nombre;
+                }
+                return somme;
+            }
+
+            afficherResultat(){
+                const result = this.calculerSomme();
+                console.log(`La somme des nombres de la liste est : ${result}`);
+            }
+        }
+
+        // Utilisation de la classe
+        const listeNombres = [1, 2, 3, 4, 5];
+        const result = new SommeNombres(listeNombres);
+        result.afficherResultat();
+    </script>
+</body>
+</html>

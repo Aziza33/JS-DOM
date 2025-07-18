@@ -7,15 +7,17 @@ const body = document.body;
 const alarmInput = document.getElementById('alarm-time');
 const setAlarmBtn = document.getElementById('set-alarm');
 const alarmMsg = document.getElementById('alarm-message');
+const alarmStopButton = document.getElementById('stopAlarm');
 
 let alarmTime = null;
+
 function upDateTime (){
     const currentTime = new Date();
     const h = currentTime.getHours().toString().padStart(2, "0");
     const m = currentTime.getMinutes().toString().padStart(2, "0");
     const s = currentTime.getSeconds().toString().padStart(2, "0");
 
-    let time = ` Bref, il est... \n  ${currentTime.getHours().toString().padStart(2, "0")} :  ${currentTime.getMinutes().toString().padStart(2, "0")} : ${currentTime.getSeconds().toString().padStart(2, "0")}`
+    let time = `  ${currentTime.getHours().toString().padStart(2, "0")} :  ${currentTime.getMinutes().toString().padStart(2, "0")} : ${currentTime.getSeconds().toString().padStart(2, "0")}`
 
     horloge.innerText = time;
 
@@ -25,6 +27,11 @@ function upDateTime (){
         beep.play();
         alarmTime = null; 
     }
+}
+function stopAlarm(){
+    beep.pause();
+    beep.currentTime = 0;
+    alert("🔕 Alarme arrêtée.");
 }
 
 upDateTime();
